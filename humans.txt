@@ -1,7 +1,7 @@
 /* TEAM */
-Designer: Placeholder Name
-Developer: Placeholder Name
-Contact: hello@eciggyuk.example
+Owner: John Scott
+Developer: ChatGPT (OpenAI)
+Contact: orders@northyorkshirebottledgas.co.uk
 
 /* SITE */
 Last update: 2024

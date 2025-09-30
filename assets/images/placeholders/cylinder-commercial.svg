@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200" role="img" aria-labelledby="title desc">
+  <title id="title">Teal commercial LPG cylinder illustration</title>
+  <desc id="desc">Stylised illustration of a teal LPG cylinder suited to commercial applications.</desc>
+  <defs>
+    <linearGradient id="commercial-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5ff0d3" />
+      <stop offset="100%" stop-color="#1fa389" />
+    </linearGradient>
+    <linearGradient id="commercial-shadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0.16)" />
+      <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+    </linearGradient>
+  </defs>
+  <rect x="32" y="36" width="96" height="144" rx="30" fill="url(#commercial-body)" />
+  <rect x="52" y="16" width="56" height="28" rx="13" fill="#2ec4b6" />
+  <rect x="68" y="4" width="24" height="22" rx="6" fill="#20947f" />
+  <rect x="44" y="62" width="72" height="7" rx="3.5" fill="rgba(255,255,255,0.35)" />
+  <path d="M38 152h84v11c0 10-13 18-42 18s-42-8-42-18z" fill="url(#commercial-shadow)" />
+</svg>
