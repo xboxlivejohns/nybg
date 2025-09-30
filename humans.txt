@@ -1,0 +1,8 @@
+/* TEAM */
+Designer: Placeholder Name
+Developer: Placeholder Name
+Contact: hello@eciggyuk.example
+
+/* SITE */
+Last update: 2024
+Standards: HTML5, CSS3, WCAG AA

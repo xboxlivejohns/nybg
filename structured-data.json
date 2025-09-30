@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Eciggy UK",
+  "url": "https://example.com/",
+  "image": "https://example.com/assets/images/brand.jpg",
+  "telephone": "+44 3300 000000",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Placeholder Street",
+    "addressLocality": "London",
+    "postalCode": "EC1A 1AA",
+    "addressCountry": "GB"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/eciggyuk",
+    "https://www.instagram.com/eciggyuk"
+  ],
+  "priceRange": "££"
+}

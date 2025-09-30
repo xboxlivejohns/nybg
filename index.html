@@ -1,298 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eciggy UK | Vape Shop & E-Liquid Specialists</title>
-  <link rel="stylesheet" href="assets/css/eciggy-theme.css" />
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eciggy UK | Fruity E-Liquid Showcase</title>
+  <meta name="description" content="Eciggy UK showcases fruity e-liquids and vape essentials with quick contact details for retail enquiries.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
-<body class="theme--blackcurrant">
-  <div class="age-gate" id="ageGate" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="age-gate__dialog">
-      <div class="age-gate__badge" aria-hidden="true">18+</div>
-      <h1 class="age-gate__title">Adults only</h1>
-      <p class="age-gate__text">
-        Eciggy UK sells vaping products intended strictly for adults. Please confirm that you are 18 years of age or older to enter.
-      </p>
-      <div class="age-gate__actions">
-        <button type="button" class="age-gate__confirm" id="ageGateConfirm">I am 18 or older</button>
-        <button type="button" class="age-gate__exit" id="ageGateExit">Leave site</button>
-      </div>
-    </div>
-  </div>
-  <div class="top-bar">
-    <span class="top-bar__item">Free UK delivery on orders over £30</span>
-    <span class="top-bar__item">0330 043 9980</span>
-    <span class="top-bar__item">Same-day dispatch before 4pm</span>
-  </div>
-  <header class="nav">
-    <div class="nav__inner">
-      <a href="#" class="brand" aria-label="Eciggy UK home">
-        <span class="brand__mark">EC</span>
-        <span class="brand__name">Eciggy UK</span>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header" data-nav data-nav-open="false">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">🍇</span>
+        <span class="brand__text">Eciggy UK</span>
       </a>
-      <button class="btn btn--ghost nav__toggle" type="button" data-nav-toggle aria-label="Toggle navigation">
-        <span class="hidden-visually">Toggle navigation</span>
-        <span aria-hidden="true">Menu</span>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="visually-hidden">Toggle navigation</span>
       </button>
-      <ul class="menu" role="list">
-        <li class="menu__item"><a class="menu__link is-lemon" href="#disposables">Disposable Vapes</a></li>
-        <li class="menu__item"><a class="menu__link is-straw" href="#kits">Starter Kits</a></li>
-        <li class="menu__item"><a class="menu__link is-berry" href="#eliquids">E-Liquids</a></li>
-        <li class="menu__item"><a class="menu__link is-grape" href="#coils">Coils & Pods</a></li>
-        <li class="menu__item"><a class="menu__link is-currant" href="#support">Support</a></li>
-      </ul>
-      <a class="btn btn--sticker nav__cta" href="#shop">Shop All Vapes</a>
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a href="#flavours">Flavours</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
-  <main>
-    <section class="section hero" id="shop">
-      <div class="hero__content">
-        <h1>Your UK Vape Destination for Flavor, Value &amp; Expert Support</h1>
-        <p>
-          Eciggy UK helps you stay smoke-free with curated vape kits, bold disposable ranges,
-          and premium e-liquids sourced from trusted brands. Free delivery over £30, and real
-          humans ready to help.
-        </p>
-        <div class="hero__stats">
-          <span class="chip">1000+ 5★ Reviews</span>
-          <span class="chip">2500+ Products in Stock</span>
-          <span class="chip">100% Genuine Brands</span>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__layout">
+        <div class="hero__copy">
+          <h1 id="hero-title">Fruity vape inspiration from Eciggy UK</h1>
+          <p>
+            Discover vibrant shortfills and nic salts with tasting notes inspired by British fruit bowls.
+            Eciggy UK curates premium blends for retailers who demand quality and consistency.
+          </p>
+          <div class="hero__chips" role="list">
+            <span class="chip chip--lemon" role="listitem">Citrus zest</span>
+            <span class="chip chip--strawberry" role="listitem">Berry burst</span>
+            <span class="chip chip--blueberry" role="listitem">Cool crush</span>
+            <span class="chip chip--grape" role="listitem">Velvet grape</span>
+          </div>
         </div>
-      </div>
-      <div class="hero__card glass-panel">
-        <h2 class="hero__card-title">Need a recommendation?</h2>
-        <p class="hero__card-intro">Let's talk.</p>
-        <p class="hero__card-copy">
-          Call us on 0330 043 9980 for tailored advice—from first vape kits to upgrading your
-          setup. We're real vapers who love to help.
-        </p>
-        <div class="hero__actions">
-          <a class="btn" href="tel:03300439980">Call 0330 043 9980</a>
-          <a class="btn btn--outline" href="mailto:hello@eciggyuk.co.uk">Email the team</a>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__fruit hero__fruit--lemon"></div>
+          <div class="hero__fruit hero__fruit--berry"></div>
+          <div class="hero__fruit hero__fruit--grape"></div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="disposables">
-      <h2>Disposable Vape Best Sellers</h2>
-      <p class="section__lead">Shop the hottest disposable vape brands with consistent flavour, long-lasting battery life, and great multi-buy offers.</p>
-      <div class="section__grid">
-        <article class="card">
-          <span class="card__eyebrow">Elf Bar</span>
-          <h3>Elfa Pro Prefilled Pod Kit</h3>
-          <p>Sleek rechargeable device with prefilled pods. Mix &amp; match flavours in seconds.</p>
-        </article>
-        <article class="card">
-          <span class="card__eyebrow">Lost Mary</span>
-          <h3>BM600 Disposable</h3>
-          <p>Iconic flavours and 20mg salt nic for smooth throat hits—perfect for on-the-go vaping.</p>
-        </article>
-        <article class="card">
-          <span class="card__eyebrow">SKE</span>
-          <h3>Crystal Bar 600</h3>
-          <p>Eye-catching design with consistent vapour production from first puff to last.</p>
-        </article>
+    <section class="section" id="flavours" aria-labelledby="flavour-title">
+      <div class="container">
+        <h2 id="flavour-title">Shop the fruity trio</h2>
+        <p class="section__lead">Three showcase blends with tasting notes, ready for your shelves. Buttons are presentation-only to demonstrate cart styling.</p>
+        <div class="product-grid">
+          <article class="product-card">
+            <img src="assets/images/placeholders/lemon.svg" alt="Illustration of a lemon" width="160" height="160">
+            <div class="product-card__body">
+              <span class="product-card__tag chip chip--lemon">Lemon Zing</span>
+              <h3>Sunrise Sherbet</h3>
+              <p>Fresh Sicilian lemons balanced with a sherbet sparkle for a bright all-day vape.</p>
+              <button type="button" class="btn" data-ripple aria-label="Add Sunrise Sherbet to basket">Add to cart</button>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="assets/images/placeholders/strawberry.svg" alt="Illustration of strawberries" width="160" height="160">
+            <div class="product-card__body">
+              <span class="product-card__tag chip chip--strawberry">Strawberry Silk</span>
+              <h3>Garden Gala</h3>
+              <p>Plump British strawberries with a hint of vanilla cream for a smooth exhale.</p>
+              <button type="button" class="btn" data-ripple aria-label="Add Garden Gala to basket">Add to cart</button>
+            </div>
+          </article>
+          <article class="product-card">
+            <img src="assets/images/placeholders/blueberry.svg" alt="Illustration of blueberries" width="160" height="160">
+            <div class="product-card__body">
+              <span class="product-card__tag chip chip--blueberry">Blueberry Chill</span>
+              <h3>Midnight Orchard</h3>
+              <p>Juicy blueberries layered with a cool mint finish to keep the flavour crisp.</p>
+              <button type="button" class="btn" data-ripple aria-label="Add Midnight Orchard to basket">Add to cart</button>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="kits">
-      <h2>Starter &amp; Advanced Vape Kits</h2>
-      <p class="section__lead">Whether you're transitioning from smoking or levelling up, our curated kits deliver everything you need inside the box.</p>
-      <div class="section__grid">
-        <article class="card">
-          <span class="card__eyebrow">New to vaping</span>
-          <h3>Simple Pod Kits</h3>
-          <p>Compact, leak-resistant devices with auto-draw technology. Just add your favourite nic salts.</p>
-        </article>
-        <article class="card">
-          <span class="card__eyebrow">Intermediate</span>
-          <h3>Adjustable Vape Mods</h3>
-          <p>Dial in airflow and wattage for the perfect MTL or RDL experience, with long-lasting batteries.</p>
-        </article>
-        <article class="card">
-          <span class="card__eyebrow">Enthusiast</span>
-          <h3>Sub-Ohm Powerhouses</h3>
-          <p>Cloud-chasing kits with mesh coils, colour displays, and advanced safety protections.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="eliquids">
-      <h2>E-Liquids for Every Palate</h2>
-      <p class="section__lead">From 10ml nic salts to 50ml shortfills ready for 3mg or 6mg mixes, explore rich dessert blends, clean menthols, and fruity favourites.</p>
-      <div class="section__grid">
-        <article class="card">
-          <span class="card__eyebrow">Nic Salts</span>
-          <h3>Smooth nicotine hit</h3>
-          <p>Perfect for pod systems with quick absorption and refined throat hit.</p>
-        </article>
-        <article class="card">
-          <span class="card__eyebrow">50/50</span>
-          <h3>Balanced blends</h3>
-          <p>Ideal for starter kits—equal parts flavour and vapour production.</p>
-        </article>
-        <article class="card">
-          <span class="card__eyebrow">Shortfills</span>
-          <h3>Big bottles, bold taste</h3>
-          <p>Add nic shots for tailored strengths and enjoy layered flavour profiles.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section--feature" id="shortfills">
-      <h2>Eciggy Signature Shortfill Range</h2>
-      <p class="section__lead">Pair our new artwork collection with detailed product guides for every flavour in the Eciggy line-up.</p>
-      <div class="flavour-grid">
-        <a class="flavour-card" href="products/blackcurrant.html">
-          <img src="assets/images/blackcurrant.png" alt="Eciggy Blackcurrant Burst shortfill bottle" />
-          <div class="flavour-card__body">
-            <h3>Blackcurrant Burst</h3>
-            <p>Woodland berries chilled with a frosty exhale.</p>
-            <span class="flavour-card__cta">View product</span>
-          </div>
-        </a>
-        <a class="flavour-card" href="products/bubblegum.html">
-          <img src="assets/images/bubblegum.png" alt="Eciggy Bubblegum Blitz shortfill bottle" />
-          <div class="flavour-card__body">
-            <h3>Bubblegum Blitz</h3>
-            <p>Nostalgic candy sweetness with a cool twist.</p>
-            <span class="flavour-card__cta">View product</span>
-          </div>
-        </a>
-        <a class="flavour-card" href="products/cherrycola.html">
-          <img src="assets/images/cherrycola.png" alt="Eciggy Cherry Cola Fizz shortfill bottle" />
-          <div class="flavour-card__body">
-            <h3>Cherry Cola Fizz</h3>
-            <p>Sparkling cola syrup with dark cherry depth.</p>
-            <span class="flavour-card__cta">View product</span>
-          </div>
-        </a>
-        <a class="flavour-card" href="products/fruitilicious.html">
-          <img src="assets/images/fruitilicious.png" alt="Eciggy Fruiti-Licious Punch shortfill bottle" />
-          <div class="flavour-card__body">
-            <h3>Fruiti-Licious Punch</h3>
-            <p>Tropical medley of pineapple, mango and kiwi.</p>
-            <span class="flavour-card__cta">View product</span>
-          </div>
-        </a>
-        <a class="flavour-card" href="products/jackblack.html">
-          <img src="assets/images/jackblack.png" alt="Eciggy Jack Black shortfill bottle" />
-          <div class="flavour-card__body">
-            <h3>Jack Black</h3>
-            <p>Aniseed and liquorice with a menthol lift.</p>
-            <span class="flavour-card__cta">View product</span>
-          </div>
-        </a>
-        <a class="flavour-card" href="products/lemonsherbet.html">
-          <img src="assets/images/lemonsherbet.png" alt="Eciggy Lemon Sherbet Pop shortfill bottle" />
-          <div class="flavour-card__body">
-            <h3>Lemon Sherbet Pop</h3>
-            <p>Zingy lemon candy with fizzy sherbet.</p>
-            <span class="flavour-card__cta">View product</span>
-          </div>
-        </a>
-        <a class="flavour-card" href="products/strawgasm.html">
-          <img src="assets/images/strawgasm.png" alt="Eciggy Strawgasm shortfill bottle" />
-          <div class="flavour-card__body">
-            <h3>Strawgasm</h3>
-            <p>Strawberries and cream dessert clouds.</p>
-            <span class="flavour-card__cta">View product</span>
-          </div>
-        </a>
-        <a class="flavour-card" href="products/watermelon.html">
-          <img src="assets/images/watermelon.png" alt="Eciggy Watermelon Wave shortfill bottle" />
-          <div class="flavour-card__body">
-            <h3>Watermelon Wave</h3>
-            <p>Refreshing melon blend with icy finish.</p>
-            <span class="flavour-card__cta">View product</span>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <section class="section" id="coils">
-      <h2>Coils, Pods &amp; Accessories</h2>
-      <p class="section__lead">Keep your kit running like new with genuine replacement parts shipped directly from our UK warehouse.</p>
-      <div class="section__grid">
-        <article class="card">
-          <span class="card__eyebrow">Mesh coils</span>
-          <h3>Maximum flavour</h3>
-          <p>Enhanced surface area for crisp flavour and dense vapour.</p>
-        </article>
-        <article class="card">
-          <span class="card__eyebrow">Replacement pods</span>
-          <h3>Leak-free vaping</h3>
-          <p>Fresh pods for your favourite kits—fill, click, enjoy.</p>
-        </article>
-        <article class="card">
-          <span class="card__eyebrow">Chargers &amp; cases</span>
-          <h3>Always ready</h3>
-          <p>Keep your gear protected with durable cases and fast USB-C chargers.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="support">
-      <h2>Why Shop With Eciggy UK?</h2>
-      <p class="section__lead">We're more than an online basket—we're a team of vape experts dedicated to making your journey smooth, safe, and satisfying.</p>
-      <ul class="benefits">
-        <li>Friendly UK-based support</li>
-        <li>Age-verified purchasing</li>
-        <li>Trusted, TPD-compliant brands</li>
-        <li>Secure payments &amp; Klarna available</li>
-      </ul>
-    </section>
-
-    <section class="section cta-section">
-      <h2>Ready to explore the full Eciggy UK range?</h2>
-      <p>Browse disposables, pod kits, coils, and e-liquids curated by vapers for vapers. Join the smoke-free community today.</p>
-      <div class="cta-links">
-        <a class="btn" href="#disposables">Shop Disposables</a>
-        <a class="btn btn--outline" href="#eliquids">Shop E-Liquids</a>
-        <a class="btn btn--ghost" href="#support">Contact Support</a>
+    <section class="section section--highlight" id="about" aria-labelledby="about-title">
+      <div class="container callout">
+        <div class="callout__content">
+          <h2 id="about-title">About Eciggy UK</h2>
+          <p>
+            Eciggy UK supports independent vape retailers with compliant, lab-tested e-liquids and approachable customer care.
+            Speak with our wholesale team for tasting sessions and stockist pricing.
+          </p>
+          <ul class="callout__list">
+            <li>Responsive UK-based account managers</li>
+            <li>Same-day dispatch across the United Kingdom</li>
+            <li>Marketing-ready imagery and tasting notes</li>
+          </ul>
+        </div>
+        <aside class="callout__aside" aria-label="Contact Eciggy UK">
+          <p><strong>Wholesale enquiries</strong></p>
+          <p>Telephone: <a href="tel:+443300000000">0330 000 0000</a></p>
+          <p>Email: <a href="mailto:hello@eciggyuk.example">hello@eciggyuk.example</a></p>
+          <p><a class="btn btn--outline" href="pages/contact.html">Contact form</a></p>
+        </aside>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-container">
+    <div class="container footer__inner">
       <div>
-        <h3>Eciggy UK</h3>
-        <p>Registered UK vape retailer supplying high-quality vaping hardware and e-liquids since 2012.</p>
+        <h2 class="footer__title">Eciggy UK</h2>
+        <p>Placeholder retail address, London, United Kingdom.</p>
       </div>
       <div>
-        <h3>Shop</h3>
-        <ul>
-          <li><a href="#disposables">Disposable Vapes</a></li>
-          <li><a href="#kits">Starter Kits</a></li>
-          <li><a href="#eliquids">E-Liquids</a></li>
-          <li><a href="#coils">Coils &amp; Pods</a></li>
+        <h3 class="footer__heading">Browse</h3>
+        <ul class="footer__list">
+          <li><a href="#flavours">Fruity flavours</a></li>
+          <li><a href="#about">Our story</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
         </ul>
       </div>
       <div>
-        <h3>Customer Care</h3>
-        <ul>
-          <li><a href="mailto:hello@eciggyuk.co.uk">Email Support</a></li>
-          <li><a href="tel:03300439980">0330 043 9980</a></li>
-          <li><a href="#">Delivery &amp; Returns</a></li>
-          <li><a href="#">Age Verification</a></li>
+        <h3 class="footer__heading">Get in touch</h3>
+        <ul class="footer__list">
+          <li><a href="tel:+443300000000">0330 000 0000</a></li>
+          <li><a href="mailto:hello@eciggyuk.example">hello@eciggyuk.example</a></li>
         </ul>
-      </div>
-      <div>
-        <h3>Stay in the loop</h3>
-        <p>Sign up for vape news, flavour drops, and exclusive offers.</p>
-        <form aria-label="Newsletter signup">
-          <label for="email" class="hidden-visually">Email address</label>
-          <input id="email" type="email" name="email" placeholder="Email address" required />
-          <button type="submit" class="btn" data-variant="full-width">Subscribe</button>
-        </form>
       </div>
     </div>
-    <p class="footer-bottom">© <span id="year"></span> Eciggy UK. Vape responsibly. 18+ only.</p>
+    <p class="footer__note">© <span id="year">2024</span> Eciggy UK. Vape responsibly.</p>
   </footer>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/eciggy-theme.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
