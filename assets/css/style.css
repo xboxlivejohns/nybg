@@ -220,6 +220,37 @@ a:focus-visible {
   margin-top: 2.25rem;
 }
 
+.hero__brand {
+  margin-top: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: 999px;
+  border: 1px solid var(--colour-border);
+  background: rgba(10, 16, 28, 0.65);
+  box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.22);
+}
+
+.hero__brand-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  color: var(--colour-muted);
+}
+
+.hero__brand-text strong {
+  color: var(--colour-text);
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.hero__brand img {
+  width: 120px;
+  height: auto;
+}
+
 .hero__shape {
   width: 7rem;
   height: 10rem;
@@ -297,6 +328,21 @@ a:focus-visible {
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
+.product-card__media {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: rgba(10, 16, 28, 0.6);
+  box-shadow: inset 0 0 0 1px rgba(245, 248, 255, 0.04);
+}
+
+.product-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .product-card:hover,
 .product-card:focus-within {
   transform: translateY(-0.4rem);
@@ -310,6 +356,41 @@ a:focus-visible {
 
 .product-card__tag {
   justify-self: start;
+}
+
+.product-card__specs {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--colour-muted);
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.brand-partners {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.brand-partners__card {
+  padding: 1.25rem 1.75rem;
+  border-radius: 1rem;
+  border: 1px solid var(--colour-border);
+  background: rgba(10, 16, 28, 0.65);
+  box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.18);
+  display: grid;
+  gap: 0.65rem;
+  text-align: center;
+}
+
+.brand-partners__card p {
+  margin: 0;
+  color: var(--colour-muted);
+  font-size: 0.95rem;
 }
 
 .btn {
