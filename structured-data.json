@@ -1,15 +1,16 @@
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Eciggy UK",
-  "url": "https://example.com/",
-  "image": "https://example.com/assets/images/brand.jpg",
-  "telephone": "+44 3300 000000",
+  "name": "North Yorkshire Bottled Gas",
+  "url": "https://northyorkshirebottledgas.co.uk/",
+  "image": "https://northyorkshirebottledgas.co.uk/assets/images/brand.svg",
+  "telephone": "+44 1423 324411",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "123 Placeholder Street",
-    "addressLocality": "London",
-    "postalCode": "EC1A 1AA",
+    "streetAddress": "Station Yard, Helperby",
+    "addressLocality": "York",
+    "addressRegion": "North Yorkshire",
+    "postalCode": "YO61 2RY",
     "addressCountry": "GB"
   },
   "openingHoursSpecification": [
@@ -22,13 +23,18 @@
         "Thursday",
         "Friday"
       ],
-      "opens": "09:00",
+      "opens": "08:00",
       "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "12:00"
     }
   ],
   "sameAs": [
-    "https://www.facebook.com/eciggyuk",
-    "https://www.instagram.com/eciggyuk"
+    "https://www.flogas.co.uk/stockists/john-scott-ta-north-yorkshire-bottled-gas-3"
   ],
   "priceRange": "££"
 }
