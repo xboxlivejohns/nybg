@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title">
+  <title id="title">Grape illustration</title>
+  <defs>
+    <linearGradient id="grapeGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#d9a9ff" />
+      <stop offset="100%" stop-color="#8b3bff" />
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" rx="32" fill="#1a1c29" />
+  <g fill="url(#grapeGradient)" stroke="#b96bff" stroke-width="6">
+    <circle cx="80" cy="52" r="20" />
+    <circle cx="60" cy="76" r="22" />
+    <circle cx="100" cy="76" r="22" />
+    <circle cx="70" cy="104" r="22" />
+    <circle cx="110" cy="104" r="22" />
+  </g>
+  <path d="M80 40c4-10 10-18 18-22" fill="none" stroke="#78c26d" stroke-width="6" stroke-linecap="round" />
+</svg>
