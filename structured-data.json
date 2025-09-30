@@ -4,13 +4,12 @@
   "name": "North Yorkshire Bottled Gas",
   "url": "https://northyorkshirebottledgas.co.uk/",
   "image": "https://northyorkshirebottledgas.co.uk/assets/images/brand.svg",
-  "telephone": "+44 1423 324411",
+  "telephone": "+44 7898 366726",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Station Yard, Helperby",
-    "addressLocality": "York",
-    "addressRegion": "North Yorkshire",
-    "postalCode": "YO61 2RY",
+    "streetAddress": "Stark Bank Road",
+    "addressLocality": "Ellingstring",
+    "postalCode": "HG4 4PJ",
     "addressCountry": "GB"
   },
   "openingHoursSpecification": [
@@ -24,17 +23,18 @@
         "Friday"
       ],
       "opens": "08:00",
-      "closes": "18:00"
+      "closes": "17:00"
     },
     {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": "Saturday",
-      "opens": "08:00",
-      "closes": "12:00"
+      "opens": "09:00",
+      "closes": "13:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday"
     }
-  ],
-  "sameAs": [
-    "https://www.flogas.co.uk/stockists/john-scott-ta-north-yorkshire-bottled-gas-3"
   ],
   "priceRange": "££"
 }
