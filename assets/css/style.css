@@ -10,6 +10,9 @@
   --accent-blue: #1d8fe1;
   --accent-teal: #2ec4b6;
   --accent-slate: #8c94b8;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-6: 2rem;
   --font-body: "Poppins", "Segoe UI", sans-serif;
   --max-width: 72rem;
   --transition-speed: 0.3s;
@@ -188,12 +191,14 @@ a:focus-visible {
 }
 
 #home-heating-hero {
-  padding: 2.5rem 0 1.5rem;
+  margin-block: var(--space-6);
+  padding: var(--space-4) 0;
 }
 
 .home-heating-hero__media {
   position: relative;
-  border-radius: 1.5rem;
+  height: clamp(280px, 48vh, 520px);
+  border-radius: 14px;
   overflow: hidden;
   box-shadow: var(--shadow-soft);
 }
@@ -202,16 +207,20 @@ a:focus-visible {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 60% 50%;
+  border-radius: 14px;
   display: block;
 }
 
 .home-heating-hero__overlay {
   position: absolute;
-  inset: 0;
-  left: auto;
-  width: 40%;
-  padding: 3rem 2.5rem;
-  background: linear-gradient(135deg, rgba(8, 20, 40, 0.8), rgba(16, 33, 61, 0.72));
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+  max-width: 38ch;
+  padding: var(--space-4);
+  background: rgba(9, 18, 28, 0.65);
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -752,23 +761,25 @@ a:focus-visible {
   font-size: 1.1rem;
 }
 
-@media (max-width: 50rem) {
-  #home-heating-hero {
-    padding: 2rem 0 1rem;
-  }
-
+@media (max-width: 900px) {
   .home-heating-hero__media {
-    display: grid;
-    gap: 1.25rem;
+    height: auto;
+    overflow: visible;
   }
 
   .home-heating-hero__overlay {
     position: static;
-    width: 100%;
-    border-radius: 1.25rem;
-    background: linear-gradient(160deg, rgba(8, 20, 40, 0.92), rgba(16, 33, 61, 0.88));
-    padding: 2rem;
-    box-shadow: none;
+    top: auto;
+    right: auto;
+    transform: none;
+    background: transparent;
+    margin-top: var(--space-3);
+    padding: var(--space-4);
+    color: var(--colour-text);
+  }
+
+  .home-heating-hero__overlay p {
+    color: var(--colour-muted);
   }
 
   .home-heating-hero__overlay .btn {
