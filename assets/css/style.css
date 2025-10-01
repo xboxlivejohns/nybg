@@ -445,7 +445,7 @@ a:focus-visible {
   border-radius: 999px;
   border: none;
   cursor: pointer;
-  background: linear-gradient(135deg, var(--accent-amber), var(--accent-blue));
+  background: var(--accent-amber);
   color: #051017;
   overflow: hidden;
   transition: transform var(--transition-speed) ease;
