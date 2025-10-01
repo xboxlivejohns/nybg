@@ -137,4 +137,75 @@
       statusElement.textContent = 'Please contact us for our next opening times.';
     }
   }
+
+  const bottleFinder = document.querySelector('[data-bottle-finder]');
+  if (bottleFinder instanceof HTMLElement) {
+    const selects = bottleFinder.querySelectorAll('[data-bottle-finder-select]');
+    const resultElement = bottleFinder.querySelector('[data-bottle-finder-result]');
+    const noteElement = bottleFinder.querySelector('[data-bottle-finder-note]');
+
+    const recommendations = {
+      butane: {
+        title: '11kg or 13kg Butane',
+        note: 'Uses a 27mm clip-on regulator already fitted to most cabinet warmers.'
+      },
+      patio: {
+        title: '11kg or 13kg Patio Gas',
+        note: 'Pairs with a 27mm clip-on regulator for BBQs and patio appliances.'
+      },
+      propane: {
+        title: '19kg or 47kg Propane',
+        note: 'Needs a screw-on POL regulator for boilers, cookers and rural heating.'
+      }
+    };
+
+    const updateRecommendation = () => {
+      if (!(resultElement instanceof HTMLElement) || !(noteElement instanceof HTMLElement)) {
+        return;
+      }
+
+      const selections = Array.from(selects).reduce((acc, select) => {
+        if (select instanceof HTMLSelectElement) {
+          acc[select.name] = select.value;
+        }
+        return acc;
+      }, /** @type {Record<string, string>} */ ({}));
+
+      const use = selections.use ?? '';
+      const appliance = selections.appliance ?? '';
+      const connection = selections.connection ?? '';
+
+      if (!use && !appliance && !connection) {
+        resultElement.textContent = 'Choose your use to begin.';
+        noteElement.textContent = '';
+        return;
+      }
+
+      let key = '';
+
+      if (connection === 'pol' || use === 'off-grid' || appliance === 'cooker') {
+        key = 'propane';
+      } else if (connection === 'clip-on' || use === 'patio' || appliance === 'bbq') {
+        key = 'patio';
+      } else if (use === 'home' || appliance === 'cabinet') {
+        key = 'butane';
+      }
+
+      if (!key) {
+        resultElement.textContent = "Let's talk it through.";
+        noteElement.textContent = "Share a little more detail and we'll confirm the exact cylinder.";
+        return;
+      }
+
+      const recommendation = recommendations[key];
+      resultElement.textContent = recommendation.title;
+      noteElement.textContent = recommendation.note;
+    };
+
+    selects.forEach((select) => {
+      select.addEventListener('change', updateRecommendation);
+    });
+
+    updateRecommendation();
+  }
 })();
