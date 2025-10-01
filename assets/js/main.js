@@ -72,4 +72,69 @@
       );
     });
   });
+
+  const statusElement = document.querySelector('[data-hours-status]');
+  if (statusElement instanceof HTMLElement) {
+    const schedule = [
+      null,
+      { open: '08:00', close: '17:00' },
+      { open: '08:00', close: '17:00' },
+      { open: '08:00', close: '17:00' },
+      { open: '08:00', close: '17:00' },
+      { open: '08:00', close: '17:00' },
+      { open: '09:00', close: '13:00' }
+    ];
+
+    const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+    const timeStringToMinutes = (time) => {
+      const [hours, minutes] = time.split(':').map(Number);
+      return hours * 60 + minutes;
+    };
+
+    const formatTime = (time) => time;
+
+    const now = new Date();
+    const currentDayIndex = now.getDay();
+    const todaysHours = schedule[currentDayIndex];
+    const currentMinutes = now.getHours() * 60 + now.getMinutes();
+
+    const findNextOpening = (startOffset) => {
+      for (let offset = startOffset; offset < startOffset + 7; offset += 1) {
+        const dayIndex = (currentDayIndex + offset) % 7;
+        const hours = schedule[dayIndex];
+        if (!hours) continue;
+        return { offset, dayIndex, hours };
+      }
+      return null;
+    };
+
+    if (todaysHours) {
+      const openMinutes = timeStringToMinutes(todaysHours.open);
+      const closeMinutes = timeStringToMinutes(todaysHours.close);
+
+      if (currentMinutes >= openMinutes && currentMinutes < closeMinutes) {
+        statusElement.textContent = `We're open until ${formatTime(todaysHours.close)} today.`;
+        return;
+      }
+
+      if (currentMinutes < openMinutes) {
+        statusElement.textContent = `We're closed until ${formatTime(todaysHours.open)} today.`;
+        return;
+      }
+    }
+
+    const nextOpening = findNextOpening(1);
+    if (nextOpening) {
+      const { offset, dayIndex, hours } = nextOpening;
+      const timeText = formatTime(hours.open);
+      if (offset === 1) {
+        statusElement.textContent = `We're closed until ${timeText} tomorrow.`;
+      } else {
+        statusElement.textContent = `We're closed until ${timeText} on ${dayNames[dayIndex]}.`;
+      }
+    } else {
+      statusElement.textContent = 'Please contact us for our next opening times.';
+    }
+  }
 })();
