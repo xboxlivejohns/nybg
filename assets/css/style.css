@@ -187,6 +187,55 @@ a:focus-visible {
   position: relative;
 }
 
+#home-heating-hero {
+  padding: 2.5rem 0 1.5rem;
+}
+
+.home-heating-hero__media {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+#home-heating-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home-heating-hero__overlay {
+  position: absolute;
+  inset: 0;
+  left: auto;
+  width: 40%;
+  padding: 3rem 2.5rem;
+  background: linear-gradient(135deg, rgba(8, 20, 40, 0.8), rgba(16, 33, 61, 0.72));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  color: #f6f8fc;
+}
+
+.home-heating-hero__overlay h1 {
+  margin: 0;
+  font-size: clamp(2rem, 2.5vw + 1rem, 3rem);
+  line-height: 1.1;
+}
+
+.home-heating-hero__overlay p {
+  margin: 0;
+  color: #dde6f7;
+  font-size: 1.05rem;
+}
+
+.home-heating-hero__overlay .btn {
+  align-self: flex-start;
+  box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.25);
+}
+
 .hero__layout {
   display: grid;
   gap: 3rem;
@@ -701,6 +750,31 @@ a:focus-visible {
   font-weight: 700;
   color: var(--accent-amber);
   font-size: 1.1rem;
+}
+
+@media (max-width: 50rem) {
+  #home-heating-hero {
+    padding: 2rem 0 1rem;
+  }
+
+  .home-heating-hero__media {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .home-heating-hero__overlay {
+    position: static;
+    width: 100%;
+    border-radius: 1.25rem;
+    background: linear-gradient(160deg, rgba(8, 20, 40, 0.92), rgba(16, 33, 61, 0.88));
+    padding: 2rem;
+    box-shadow: none;
+  }
+
+  .home-heating-hero__overlay .btn {
+    align-self: stretch;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 56rem) {
