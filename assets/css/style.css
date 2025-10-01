@@ -13,7 +13,15 @@
   --font-body: "Poppins", "Segoe UI", sans-serif;
   --max-width: 72rem;
   --transition-speed: 0.3s;
-  --shadow-soft: 0 1.5rem 3rem rgba(15, 43, 80, 0.12);
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 1.75rem;
+  --space-7: 2rem;
+  --space-8: 2.5rem;
+  --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -183,7 +191,7 @@ a:focus-visible {
 }
 
 .hero {
-  padding: 6rem 0 4.5rem;
+  padding: var(--space-7) 0 var(--space-6);
   position: relative;
 }
 
@@ -193,7 +201,7 @@ a:focus-visible {
 
 .home-heating-hero__media {
   position: relative;
-  border-radius: 1.5rem;
+  border-radius: 0.875rem;
   overflow: hidden;
   box-shadow: var(--shadow-soft);
 }
@@ -233,12 +241,12 @@ a:focus-visible {
 
 .home-heating-hero__overlay .btn {
   align-self: flex-start;
-  box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
 }
 
 .hero__layout {
   display: grid;
-  gap: 3rem;
+  gap: var(--space-5);
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 }
@@ -247,7 +255,7 @@ a:focus-visible {
   background: linear-gradient(90deg, rgba(255, 244, 230, 0.55), rgba(235, 244, 255, 0.6));
   border-top: 1px solid var(--colour-border);
   border-bottom: 1px solid var(--colour-border);
-  padding: 1.75rem 0;
+  padding: var(--space-5) 0;
 }
 
 .service-area__inner {
@@ -292,7 +300,7 @@ a:focus-visible {
 .hero__chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: var(--space-4);
   margin-top: 2rem;
 }
 
@@ -306,7 +314,7 @@ a:focus-visible {
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: var(--space-4);
   margin-top: 2.25rem;
 }
 
@@ -316,10 +324,10 @@ a:focus-visible {
   align-items: center;
   gap: 1rem;
   padding: 0.85rem 1.25rem;
-  border-radius: 999px;
+  border-radius: 0.875rem;
   border: 1px solid var(--colour-border);
   background: var(--colour-surface);
-  box-shadow: 0 1.5rem 3rem rgba(15, 43, 80, 0.12);
+  box-shadow: var(--shadow-soft);
 }
 
 .hero__brand-text {
@@ -386,7 +394,7 @@ a:focus-visible {
 }
 
 .section {
-  padding: 4rem 0;
+  padding: var(--space-7) 0;
 }
 
 .section--highlight {
@@ -401,27 +409,27 @@ a:focus-visible {
 .product-grid {
   margin-top: 2.5rem;
   display: grid;
-  gap: 2rem;
+  gap: var(--space-5);
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 }
 
 .product-card {
   background: var(--colour-surface);
-  border-radius: 1.25rem;
+  border-radius: 0.875rem;
   overflow: hidden;
   border: 1px solid var(--colour-border);
   box-shadow: var(--shadow-soft);
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.5rem;
+  gap: var(--space-5);
+  padding: var(--space-5);
   transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
 .product-card__media {
   position: relative;
   aspect-ratio: 3 / 4;
-  border-radius: 1rem;
+  border-radius: 0.75rem;
   overflow: hidden;
   background: linear-gradient(140deg, rgba(255, 244, 230, 0.55), rgba(235, 244, 255, 0.55));
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
@@ -436,7 +444,7 @@ a:focus-visible {
 .product-card:hover,
 .product-card:focus-within {
   transform: translateY(-0.4rem);
-  box-shadow: 0 1.75rem 3.5rem rgba(15, 43, 80, 0.18);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
 }
 
 .product-card__body {
@@ -462,7 +470,7 @@ a:focus-visible {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: var(--space-5);
   margin-top: 2.5rem;
 }
 
@@ -551,7 +559,7 @@ a:focus-visible {
 
 .callout {
   display: grid;
-  gap: 2rem;
+  gap: var(--space-5);
   align-items: start;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 }
@@ -563,12 +571,12 @@ a:focus-visible {
 .callout__aside {
   position: relative;
   background: linear-gradient(180deg, var(--colour-surface) 0%, rgba(239, 245, 255, 0.95) 100%);
-  border-radius: 1.5rem;
-  padding: 2rem;
+  border-radius: 0.875rem;
+  padding: var(--space-6);
   border: 1px solid var(--colour-border);
   display: grid;
-  gap: 1rem;
-  box-shadow: 0 1.25rem 2.5rem rgba(15, 43, 80, 0.14);
+  gap: var(--space-4);
+  box-shadow: var(--shadow-soft);
   overflow: hidden;
 }
 
@@ -603,19 +611,19 @@ a:focus-visible {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 0.85rem;
+  gap: var(--space-4);
 }
 
 .callout__details li {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 0.75rem;
+  gap: var(--space-3);
   align-items: start;
   padding: 0.85rem;
-  border-radius: 1rem;
+  border-radius: 0.75rem;
   background: var(--colour-surface);
   border: 1px solid rgba(16, 33, 61, 0.08);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  box-shadow: var(--shadow-soft);
 }
 
 .callout__icon {
@@ -642,18 +650,18 @@ a:focus-visible {
 .callout__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: var(--space-4);
 }
 
 .site-footer {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(237, 244, 255, 1));
-  padding: 3rem 0 1.5rem;
+  padding: var(--space-7) 0 var(--space-5);
   border-top: 1px solid var(--colour-border);
 }
 
 .footer__inner {
   display: grid;
-  gap: 2rem;
+  gap: var(--space-5);
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
 }
 
@@ -674,7 +682,7 @@ a:focus-visible {
 
 .contact-grid {
   display: grid;
-  gap: 2.5rem;
+  gap: var(--space-5);
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   margin-top: 2rem;
 }
@@ -725,7 +733,7 @@ a:focus-visible {
 
 .order-steps {
   display: grid;
-  gap: 1.5rem;
+  gap: var(--space-5);
   margin-top: 2.5rem;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 }
@@ -733,11 +741,11 @@ a:focus-visible {
 .order-step {
   background: var(--colour-surface);
   border: 1px solid var(--colour-border);
-  border-radius: 1.25rem;
-  padding: 1.75rem;
+  border-radius: 0.875rem;
+  padding: var(--space-6);
   box-shadow: var(--shadow-soft);
   display: grid;
-  gap: 0.75rem;
+  gap: var(--space-4);
 }
 
 .order-step__number {
