@@ -1,5 +1,5 @@
 /* TEAM */
-Owner: John Scott
+Owner: North Yorkshire Bottled Gas
 Developer: ChatGPT (OpenAI)
 Contact: orders@northyorkshirebottledgas.co.uk
 
