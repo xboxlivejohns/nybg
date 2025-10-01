@@ -1,0 +1,7 @@
+RewriteEngine On
+
+Redirect 301 /products /cylinders.html
+Redirect 301 /cylinder-range /cylinders.html
+RedirectMatch 301 ^/(accessories|regulators|heaters)(/.*)?$ /cylinders.html
+RedirectMatch 301 ^/pages/products\.html$ /cylinders.html
+RedirectMatch 301 ^/pages/contact\.html$ /contact.html
